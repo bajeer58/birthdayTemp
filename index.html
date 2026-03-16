@@ -1383,8 +1383,7 @@
             <div class="play-sub">press play</div>
           </div>
         </div>
-        <iframe id="yti" src="https://www.youtube.com/embed/dQw4w9WgXcQ?enablejsapi=1" allow="autoplay;encrypted-media"
-          allowfullscreen></iframe>
+        <video id="birthdayVideo" playsinline style="width:100%;height:100%;object-fit:cover;display:none;"></video>
       </div>
       <p style="font-size:.7rem;color:rgba(255,255,255,.18);font-style:italic;margin-bottom:1.5rem">✦ Replace the
         YouTube link with your personal birthday video ✦</p>
@@ -1772,9 +1771,10 @@
     ═══════════════════════════════════════ */
     function playVid() {
       document.getElementById('vcover').style.display = 'none';
-      const f = document.getElementById('yti');
-      f.style.display = 'block';
-      f.src = f.src.replace('?enablejsapi=1', '?autoplay=1&enablejsapi=1');
+      const v = document.getElementById('birthdayVideo');
+      v.style.display = 'block';
+      v.src = 'birthday_video.mp4';
+      v.play();
     }
 
     /* ═══════════════════════════════════════
